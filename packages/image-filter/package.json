@@ -1,0 +1,22 @@
+{
+  "name": "udacity-c2-image-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "tsnd --ignore node_modules --transpile-only --no-notify --respawn src/server.ts"
+  },
+  "author": "Felipe Silva <amorimdub@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.32",
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.11.2",
+    "ts-node-dev": "^1.0.0-pre.63"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jimp": "^0.16.1"
+  }
+}
