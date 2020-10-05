@@ -2,7 +2,23 @@
   "name": "udagram",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "repository": "git@github.com:amorimdub/udagram.git",
   "author": "Felipe Silva <amorimdub@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@udagram/shared": "*",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  }
 }
