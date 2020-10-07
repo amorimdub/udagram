@@ -2,7 +2,26 @@
   "name": "udagram",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "repository": "git@github.com:amorimdub/udagram.git",
   "author": "Felipe Silva <amorimdub@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "yarn exec concurrently \"yarn workspace @udagram/server run dev\" \"yarn workspace @udagram/image-filter run dev\" \"yarn workspace @udagram/web run start\""
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^26.0.14",
+    "@udagram/shared": "*",
+    "concurrently": "^5.3.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  }
 }
